@@ -42,25 +42,18 @@ li a:hover {
 
 header {
     background-color: #205EEA;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 nav {
-    height: 100px;
-    padding: 1rem 0px;
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    align-items: center;
+    height: 5rem;
+    padding: 1rem;
 }
 
 .links {
     height: 100%;
-    font-size: 14px;
-    font-weight: 700;
-    flex: 0 0 600px;
     display: flex;
-    justify-content: space-around;
-    gap: 2rem;
     list-style: none;
 }
 
@@ -68,26 +61,51 @@ nav {
     height: 100%;
 }
 
-header li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav_item {
     height: 100%;
-    width: 100%;
-    color: white;
+    white-space: nowrap;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
 }
 
-header .login {
+.links .logo,
+.links .login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1 0 0;
+}
+
+.links .logo a {
+    height: 100%;
+}
+
+.links .logo a img {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.links .login {
+    justify-content: flex-end;
+}
+
+.links .login a {
+    height: 100%;
     font-size: 14px;
     padding: 7px 16px;
     line-height: 24px;
     border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     background-color: white;
+    color: black;
 }
 
-header nav>a {
-    flex: 0 0 0;
-    color: #1D2225ff;
+.links .login a:hover {
+    color: #738ADBff;
 }
 
 .jumbo_bg {
@@ -108,7 +126,7 @@ header nav>a {
     text-align: center;
 }
 
-header h1 {
+.jumbo_container h1 {
     font-size: 3.3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -125,6 +143,10 @@ header h1 {
     border-radius: 50px;
     display: inline-block;
     background-color: white;
+}
+
+.download_mac:hover {
+    color: #738ADBff;
 }
 
 .download_link {
