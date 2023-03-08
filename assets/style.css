@@ -57,7 +57,7 @@ li a:hover {
     background-color: white;
 }
 
-.login a {
+nav>a {
     text-decoration: none;
     color: #1D2225ff;
 }
@@ -98,7 +98,7 @@ h1 {
     background-color: white;
 }
 
-.download_mac a {
+.download_link {
     text-decoration: none;
     color: black;
 }
@@ -111,7 +111,7 @@ h1 {
     background-color: #1D2225ff;
 }
 
-.open_in_browser a {
+.white_link {
     color: white;
     text-decoration: none;
 }
@@ -241,6 +241,7 @@ footer {
 
 .top_footer_column li h4 {
     color: #738ADBff;
+    font-size: 1rem;
 }
 
 .bottom_footer_container {
