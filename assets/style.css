@@ -73,6 +73,12 @@ nav {
     align-items: center;
 }
 
+.nav_item a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .links .logo,
 .links .login {
     height: 100%;
