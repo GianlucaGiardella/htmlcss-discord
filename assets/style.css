@@ -4,9 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --max-width: 1200px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
 }
 
 p {
@@ -18,7 +21,7 @@ p {
 }
 
 main section>div, nav {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin-inline: auto;
     padding-inline: 1rem;
 }
@@ -29,13 +32,11 @@ main section>div, nav {
     color: white;
 }
 
-li a {
-    color: white;
-}
-
 a {
     text-decoration: none;
     white-space: nowrap;
+    color: white;
+
 }
 
 li a:hover {
@@ -47,7 +48,6 @@ li a:hover {
 header {
     background-color: #205EEA;
     font-size: 16px;
-    font-weight: 700;
 }
 
 nav {
@@ -67,8 +67,9 @@ nav {
 
 .nav_item {
     height: 100%;
-    white-space: nowrap;
     padding-inline: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
     display: flex;
     align-items: center;
 }
@@ -81,19 +82,11 @@ nav {
 
 .links .logo,
 .links .login {
-    height: 100%;
     display: flex;
-    align-items: center;
     flex: 1 0 0;
 }
 
-.links .logo a {
-    height: 100%;
-}
-
 .links .logo a img {
-    display: flex;
-    align-items: center;
     height: 100%;
 }
 
@@ -105,17 +98,17 @@ nav {
     height: 100%;
     font-size: 14px;
     padding: 7px 16px;
-    line-height: 24px;
     border-radius: 50px;
     display: flex;
     align-items: center;
-    text-decoration: none;
     background-color: white;
-    color: black;
+    color: #1D2225;
 }
 
 .links .login a:hover {
-    color: #738ADBff;
+    text-decoration: none;
+    color: #738ADB;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .jumbo_bg {
@@ -128,10 +121,10 @@ nav {
 }
 
 .jumbo_container {
-    font-size: 20px;
     max-width: 800px;
     margin-inline: auto;
     padding-inline: 1rem;
+    font-size: 18px;
     color: white;
     text-align: center;
 }
@@ -139,29 +132,27 @@ nav {
 .jumbo_container h1 {
     font-size: 3.3rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.7rem;
 }
 
 .jumbo_container p {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .download_mac {
+    font-size: 20px;
     margin-right: 24px;
     padding: 16px 32px;
     line-height: 24px;
     border-radius: 50px;
     display: inline-block;
     background-color: white;
+    color: #1D2225;
 }
 
 .download_mac:hover {
-    color: #738ADBff;
-}
-
-.download_link {
-    text-decoration: none;
-    color: black;
+    color: #738ADB;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .open_in_browser {
@@ -169,41 +160,39 @@ nav {
     line-height: 24px;
     border-radius: 50px;
     display: inline-block;
-    background-color: #1D2225ff;
+    background-color: #1D2225;
+}
+
+.open_in_browser:hover {
+    background-color: #34393d;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* main */
 
-main .wave_bg {
-    filter: invert(100%) sepia(2%) saturate(103%) hue-rotate(111deg) brightness(114%) contrast(93%);
-    display: block;
-}
-
-main .reverse_wave_bg {
-    filter: invert(100%) sepia(2%) saturate(103%) hue-rotate(111deg) brightness(114%) contrast(93%);
-    transform: rotate(180deg);
-    display: block;
+main {
+    font-size: 19px;
+    font-weight: 300;
 }
 
 main section {
-    padding: 6rem 0;
+    padding: 5.5rem 0;
 }
 
 main section>div {
     display: flex;
-    align-items: center;
-    gap: 10%;
 }
 
 main img {
     width: 100%;
     display: block;
-    flex: 0 0 58%;
+    flex: 0 0 60%;
 }
 
 main .text {
-    flex: 0 0 32%;
-    color: #1D2225ff;
+    flex: 1 0 30%;
+    padding: 3rem;
+    color: #23272a;
 }
 
 main h2 {
@@ -212,7 +201,7 @@ main h2 {
 }
 
 main .grey_bg {
-    background-color: #F6F6F6ff;
+    background-color: #F6F6F6;
 }
 
 main .last_container {
@@ -243,31 +232,46 @@ main .last_container>p {
     line-height: 24px;
     border-radius: 50px;
     color: white;
-    background-color: #738ADBff;
+    background-color: #738ADB;
+}
+
+.last_container .download_for_mac:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #7c8fd6;
+}
+
+main .wave_bg {
+    filter: invert(100%) sepia(2%) saturate(103%) hue-rotate(111deg) brightness(114%) contrast(93%);
+    display: block;
+}
+
+main .reverse_wave_bg {
+    filter: invert(100%) sepia(2%) saturate(103%) hue-rotate(111deg) brightness(114%) contrast(93%);
+    transform: rotateX(180deg);
+    display: block;
 }
 
 /* footer */
 
 footer {
-    background-color: #1D2225ff;
-    padding: 3rem 0 2rem 0;
+    background-color: #1D2225;
+    padding: 4rem 0 2rem 0;
 }
 
 .top_footer_bg, .bottom_footer_bg {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin-inline: auto;
 }
 
 .top_footer_container {
-    padding: 10px 0 40px 0;
+    padding: 0 1rem 3rem 1rem;
     display: flex;
-    border-bottom: 1px solid #738ADBff;
+    border-bottom: 1px solid #738ADB;
 }
 
 .top_footer_container h3 {
-    font-size: 1.9rem;
-    color: #738ADBff;
-    margin-top: 15px;
+    font-size: 2rem;
+    color: #738ADB;
     margin-bottom: 20px;
 }
 
@@ -281,48 +285,50 @@ footer .ita_lang {
     margin-bottom: 20px;
 }
 
-.top_footer_container i {
-    color: white;
-    margin-right: 15px;
+footer .social {
+    flex: 0 0 calc(100% / 3);
 }
 
-footer .social {
-    flex: 1 1 calc(100% / 3);
+.top_footer_container .social i {
+    color: white;
+    margin-right: 15px;
+    font-size: 22px;
 }
 
 .top_footer_column {
-    flex: 1 1 calc(100% / 6);
+    flex: 0 0 calc(100% / 6);
     font-size: 14px;
     list-style: none;
 }
 
 .top_footer_column li {
-    margin-top: 15px;
+    margin-top: 1rem;
 }
 
-.top_footer_column li h4 {
-    color: #738ADBff;
-    font-size: 1rem;
+.top_footer_column .top_footer_title {
+    font-size: 16px;
+    color: #738ADB;
 }
 
 .bottom_footer_container {
-    padding-top: 2rem;
+    padding: 2rem 1rem 0 1rem;
     display: flex;
     justify-content: space-between;
 }
 
-.logo {
+.bottom_footer_container .logo img {
     height: 100%;
 }
 
-.register {
+.bottom_footer_container .register {
     font-size: 14px;
     padding: 7px 16px;
     line-height: 24px;
     border-radius: 50px;
-    background-color: #738ADBff;
+    background-color: #738ADB;
 }
 
-.register a {
-    color: white;
+.bottom_footer_container .register:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #7c8fd6;
 }
