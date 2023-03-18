@@ -16,8 +16,8 @@ p {
     line-height: 33px;
 }
 
-.logo {
-    height: 100%;
+li {
+    list-style: none;
 }
 
 main section>div, nav {
@@ -47,7 +47,6 @@ li a:hover {
 
 header {
     background-color: #205EEA;
-    font-size: 16px;
 }
 
 nav {
@@ -58,36 +57,30 @@ nav {
 .links {
     height: 100%;
     display: flex;
-    list-style: none;
-}
-
-.links li {
-    height: 100%;
+    text-align: center;
+    gap: 2rem;
 }
 
 .nav_item {
-    height: 100%;
-    padding-inline: 1rem;
     font-weight: 700;
     white-space: nowrap;
-    display: flex;
-    align-items: center;
 }
 
 .nav_item a {
-    height: 100%;
     display: flex;
     align-items: center;
+    height: 100%;
+    padding-inline: 0.5em;
 }
 
 .links .logo,
 .links .login {
-    display: flex;
     flex: 1 0 0;
+    display: flex;
 }
 
-.links .logo a img {
-    height: 100%;
+.links .logo a {
+    display: flex;
 }
 
 .links .login {
@@ -95,9 +88,8 @@ nav {
 }
 
 .links .login a {
-    height: 100%;
     font-size: 14px;
-    padding: 7px 16px;
+    padding: 0.5em 1.1em;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -183,10 +175,13 @@ main section>div {
     display: flex;
 }
 
-main img {
+main .container_img {
+    flex: 0 0 60%;
+}
+
+main .container_img img {
     width: 100%;
     display: block;
-    flex: 0 0 60%;
 }
 
 main .text {
@@ -204,17 +199,22 @@ main .grey_bg {
     background-color: #F6F6F6;
 }
 
-main .last_container {
+main .big_container {
     max-width: 1400px;
     margin-inline: 1rem;
     text-align: center;
 }
 
-main .last_container>p {
+main .big_container .big_container_img img{
+    display: block;
+    width: 100%;
+}
+
+main .big_container>p {
     padding-inline: 6rem;
 }
 
-.last_container h3 {
+.big_container h3 {
     font-size: 2rem;
     padding: 31px;
     width: max-content;
@@ -225,7 +225,7 @@ main .last_container>p {
     margin-bottom: 1rem;
 }
 
-.last_container .download_for_mac {
+.big_container .download_for_mac {
     width: max-content;
     margin: auto;
     padding: 16px 32px;
@@ -235,7 +235,7 @@ main .last_container>p {
     background-color: #738ADB;
 }
 
-.last_container .download_for_mac:hover {
+.big_container .download_for_mac:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     background-color: #7c8fd6;
 }
